@@ -71,9 +71,15 @@ NodeManager.prototype.run = function() {
 };
 
 NodeManager.prototype.setValue = function() {
+  console.log("clicked")
     var value = document.getElementById("staticValue").value;
-    if(isNaN(value) || value == "") {
-        value = 0;
+    console.log(value)
+    if(value === "+inf") {
+        console.log("positive inf")
+        value =  Number.POSITIVE_INFINITY;
+    } else if (value === "-inf") {
+        console.log("negative inf")
+        value = Number.NEGATIVE_INFINITY;
     } else {
         value = Number.parseInt(value);
         value = Math.min(99, Math.max(-99, value));

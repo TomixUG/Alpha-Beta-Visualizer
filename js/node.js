@@ -111,6 +111,12 @@ Node.prototype.draw = function(ctx) {
     };
     if (this.value != null && this.value != Number.POSITIVE_INFINITY && this.value != Number.NEGATIVE_INFINITY) {
         ctx.fillText(this.value, this.pos[0], this.pos[1] + Node.radius / 15);
+    } else {
+        if(this.value == Number.POSITIVE_INFINITY){
+            ctx.fillText("+inf", this.pos[0], this.pos[1] + Node.radius / 15);
+        } else if(this.value == Number.NEGATIVE_INFINITY){
+            ctx.fillText("-inf", this.pos[0], this.pos[1] + Node.radius / 15);
+        }
     };
 
     if (this.children.length == 0) {
