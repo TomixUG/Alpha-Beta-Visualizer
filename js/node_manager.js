@@ -74,10 +74,10 @@ NodeManager.prototype.setValue = function() {
   console.log("clicked")
     var value = document.getElementById("staticValue").value;
     console.log(value)
-    if(value === "+inf") {
+    if(value === "Infinity") {
         console.log("positive inf")
         value =  Number.POSITIVE_INFINITY;
-    } else if (value === "-inf") {
+    } else if (value === "-Infinity") {
         console.log("negative inf")
         value = Number.NEGATIVE_INFINITY;
     } else {
